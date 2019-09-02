@@ -1,9 +1,7 @@
 {
-    "name": "redomjs.org",
+    "name": "redom-docs",
     "version": "1.0.0",
-    "main": "index.js",
-    "repository": "https://github.com/mauroreisvieira/redomjs.org.git",
-    "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
+    "repository": "https://github.com/redom/redom-docs.git",
     "license": "MIT",
     "scripts": {
         "api": "node index.js",
