@@ -1,0 +1,46 @@
+#backers,
+#contributors,
+#sponsors {
+    @apply bg-gray-100;
+}
+
+#contributors svg {
+    @apply pointer-events-none;
+    @apply text-gray-100;
+    @apply absolute;
+    bottom: 100%;
+}
+
+a[data-title] {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+a[data-title]::after {
+    @apply bg-gray-800;
+    @apply rounded-sm;
+    @apply text-xs;
+    @apply px-2 py-1;
+    transition: 222ms cubic-bezier(0.4, 0, 1, 1);
+    transition-property: opacity, transform;
+    @apply absolute;
+    bottom: 100%;
+    left: 50%;
+    min-width: 120px;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    text-transform: none;
+    pointer-events: none;
+    content: attr(data-title);
+    z-index: 1000;
+    word-break: break-all;
+}
+
+a[data-title]:hover::after {
+    transform: translate(-50%, -8px);
+    opacity: 1;
+    pointer-events: all;
+}

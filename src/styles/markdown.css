@@ -1,0 +1,195 @@
+a:not([href]) {
+    text-transform: uppercase;
+}
+
+a[href] {
+    text-transform: inherit;
+}
+
+.markdown-doc p {
+    @apply text-base;
+    @apply mt-6;
+    @apply leading-relaxed;
+}
+
+.markdown-doc strong {
+    @apply font-semibold;
+}
+
+.markdown-doc p,
+.markdown-doc li {
+    @apply leading-relaxed;
+}
+
+.markdown-doc a {
+    @apply text-primary;
+}
+
+.markdown-doc a:hover {
+    @apply text-primary underline;
+}
+
+.markdown-doc ul,
+.markdown-doc ol {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.markdown-doc ul {
+    list-style-type: disc;
+}
+
+.markdown-doc ol {
+    list-style-type: decimal;
+}
+
+.markdown-doc pre {
+    @apply my-6;
+}
+
+.markdown-doc pre::before {
+    @apply uppercase;
+    @apply absolute;
+    @apply text-xs;
+    @apply font-medium;
+    @apply mt-2 mr-2;
+    @apply top-0 right-0;
+    @apply text-gray-400;
+}
+
+.markdown-doc pre.language-js::before {
+    content: "js";
+}
+
+.markdown-doc pre.language-html::before {
+    content: "html";
+}
+
+.markdown-doc pre.language-shell::before {
+    content: "shell";
+}
+
+.markdown-doc pre.language-bash::before {
+    content: "bash";
+}
+
+.markdown-doc pre.language-json::before {
+    content: "json";
+}
+
+.markdown-doc p code,
+.markdown-doc li code,
+.markdown-doc td code {
+    @apply inline-block;
+    @apply bg-gray-100;
+    @apply rounded-sm;
+    @apply text-sm;
+    @apply px-1;
+    @apply leading-relaxed;
+    @apply whitespace-normal;
+    @apply text-accent;
+    @apply font-mono;
+    @apply align-baseline;
+    @apply font-normal;
+}
+
+.markdown-doc h1 {
+    @apply mb-1;
+    @apply leading-none;
+    @apply text-gray-900;
+    @apply font-light;
+    @apply text-3xl;
+}
+
+.markdown-doc h2 {
+    @apply mt-16;
+    @apply mb-4;
+    @apply text-gray-900;
+    @apply leading-none;
+    @apply font-normal;
+    @apply text-2xl;
+}
+
+.markdown-doc h3 {
+    @apply mt-12 -mb-3;
+    @apply text-gray-900;
+    @apply leading-tight;
+    @apply font-medium;
+    @apply text-xl;
+}
+
+.markdown-doc h4 {
+    @apply mt-12;
+    @apply mb-0;
+    @apply text-gray-900;
+    @apply leading-snug;
+    @apply font-medium;
+    @apply text-lg;
+}
+
+.markdown-doc blockquote {
+    @apply relative;
+    @apply border-accent;
+    @apply bg-gray-100;
+    @apply text-gray-600;
+    @apply border-l-4;
+    @apply pl-6 pr-4 py-4;
+    @apply my-6;
+}
+
+.markdown-doc blockquote::before {
+    content: "!";
+    @apply w-5;
+    @apply h-5;
+    @apply bg-accent;
+    @apply absolute;
+    @apply left-0;
+    @apply top-0;
+    @apply rounded-full;
+    @apply text-white;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply text-xs;
+    @apply font-bold;
+    transform: translate(calc(-50% + -2px), 50%);
+}
+
+.markdown-doc blockquote p {
+    @apply mt-0;
+}
+
+.markdown-doc iframe {
+    @apply my-8;
+    @apply w-full;
+    height: 500px;
+}
+
+.markdown-doc table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.markdown-doc table th {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4a5568;
+    padding: 0.5rem;
+    background-color: #f7fafc;
+}
+
+.markdown-doc table td {
+    padding: 0.5rem;
+    border-top-width: 1px;
+    border-color: #edf2f7;
+    font-size: 0.875rem;
+}
+
+.markdown-doc table td:first-child {
+    border-color: #e2e8f0;
+}

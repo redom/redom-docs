@@ -1,0 +1,84 @@
+pre  {
+    font-size: 0.85em;
+    @apply bg-gray-100;
+    border-radius: 2px;
+    position: relative;
+}
+
+pre code {
+    overflow-x: auto;
+    color: #525252;
+    white-space: pre;
+    padding: 1.2em 1.4em;
+    font-size: 0.85rem;
+    line-height: 1.6rem;
+    display: block;
+}
+
+.token.comment {
+    color: #666;
+}
+
+.token.prolog, .token.doctype, .token.cdata {
+    color: #aaa;
+}
+
+.token.punctuation {
+    color: #888;
+}
+
+.namespace {
+    color: #aaa;
+}
+
+.token.property {
+    color: #888;
+}
+
+.token.tag, .token.constant, .token.symbol {
+@apply text-pink-600;
+}
+
+.token.function {
+    @apply text-blue-600;
+}
+
+.token.selector, .token.attr-name, .token.char, .token.builtin, .token.inserted, .token.class-name, .token.boolean, .token.number {
+    @apply text-yellow-700;
+}
+
+.token.operator {
+    @apply text-indigo-600;
+}
+
+.token.entity, .token.url, .token.variable {
+    color: #fff;
+}
+
+.token.atrule, .token.attr-value, .token.string {
+    @apply text-green-600;
+}
+
+.token.keyword {
+    @apply text-purple-600;
+}
+
+.token.regex, .token.important {
+    color: #fff;
+}
+
+.token.important, .token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.token.deleted {
+    @apply text-red-600;
+}
