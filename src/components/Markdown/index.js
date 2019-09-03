@@ -35,6 +35,7 @@ export default class Markdown {
                                     {
                                         href: docsRepo + path,
                                         target: "_black",
+                                        rel: "noopener",
                                     },
                                     "Edit this page on GitHub"
                                 )

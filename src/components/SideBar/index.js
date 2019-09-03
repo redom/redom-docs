@@ -85,6 +85,7 @@ export default class SideBar {
                         href: startPage,
                         title: "RE:DOM",
                         class: "self-center w-24 mb-8",
+                        rel: "prerender",
                     },
                     (this.logo = el("img", {
                         src: "./static/images/redomjs.svg",
