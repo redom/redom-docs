@@ -26,4 +26,4 @@ app.update('about', data);
 - remove it
 - create an `About` component
 - update it with `data`
-- call all defined [lifecycle events](#component-lifecycle)
+- call all defined [lifecycle](#lifecycle)
