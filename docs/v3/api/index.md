@@ -2,15 +2,15 @@
 
 ## Element
 
-```js
+```ts
 html(query, ...args?);
 ```
 
-```js
+```ts
 h(query, ...args?);
 ```
 
-```js
+```ts
 el(query, ...args?);
 ```
 
@@ -21,7 +21,7 @@ el(query, ...args?);
 
 ## List
 
-```js
+```ts
 list(parent, View, key?, initData?);
 ```
 
@@ -34,7 +34,7 @@ list(parent, View, key?, initData?);
 
 ## Mount
 
-```js
+```ts
 mount(parent: HTMLElement, child: HTMLElement, before?: HTMLElement, replace?: boolean);
 ```
 
@@ -47,7 +47,7 @@ mount(parent: HTMLElement, child: HTMLElement, before?: HTMLElement, replace?: b
 
 ## Unmount
 
-```js
+```ts
 unmount(parent: HTMLElement, child: HTMLElement);
 ```
 
@@ -58,46 +58,46 @@ unmount(parent: HTMLElement, child: HTMLElement);
 
 ## Place
 
-```js
+```ts
 place(View: HTMLElement, initData?: any): Place;
 ```
 
 ## Router
 
-```js
+```ts
 router(parent: RedomQuery, Views: RouterDictionary, initData?: any): Router;
 ```
 
 ## Set Attribute
 
-```js
+```ts
 setAttr(view: node, arg1: string | object, arg2?: string): void;
 ```
 
 ## Set Style
 
-```js
+```ts
 setStyle(view: node, arg1: string | object, arg2?: string): void;
 ```
 
 ## Set Children
 
-```js
+```ts
 setChildren(parent: node, children: node[]): void;
 ```
 
 ## SVG
 
-```js
+```ts
 svg(query: RedomQuery, ...args: node | string | number[]): SVGElement;
 ```
 
-```js
+```ts
 s(query: RedomQuery, ...args: node | string | number[]): SVGElement;
 ```
 
 ## Text
 
-```js
+```ts
 text(str: string): Text;
 ```
