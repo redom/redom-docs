@@ -3,7 +3,7 @@ const contributors = require("./contributors.js");
 const router = require("./router.js");
 
 module.exports = {
-    startPage: "/",
+    startPage: "https://redom.js.org/",
     contributors: contributors,
     backers: backers,
     docsRepo: "https://github.com/redom/redom-docs/blob/master/",
