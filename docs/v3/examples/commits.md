@@ -7,6 +7,7 @@
     "el": "iframe",
     "attributes": {
         "src": "https://jsfiddle.net/mauroreisvieira/Lspv60wf/5/embedded/result,js,css",
+        "title": "GitHub Commits",
         "allowfullscreen": "allowfullscreen",
         "frameborder": "0"
     }

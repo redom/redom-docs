@@ -10,6 +10,7 @@ You'll have to click on `Edit in JSFiddle` to see the live result.
     "el": "iframe",
     "attributes": {
         "src": "https://jsfiddle.net/mauroreisvieira/mLq6orae/embedded/result,js,css",
+        "title": "TodoMVC",
         "allowfullscreen": "allowfullscreen",
         "frameborder": "0"
     }
