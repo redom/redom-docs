@@ -12,6 +12,7 @@ class Link {
         this.el.target = "_blank";
         this.el.href = link;
         this.el.title = text;
+        this.el.rel = "noopener";
         this.el.innerHTML = icon;
     }
 }
