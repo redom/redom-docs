@@ -36,7 +36,7 @@ class Link {
                     "span",
                     {
                         class:
-                            "mb-3 lg:mb-2 text-gray-500 uppercase mb-3 lg:mb-2 text-gray-500 tracking-wide font-bold text-sm lg:text-xs",
+                            "mb-3 lg:mb-2 uppercase mb-3 lg:mb-2 text-gray-500 tracking-wide font-bold text-sm lg:text-xs",
                     },
                     text
                 ),
@@ -55,7 +55,7 @@ class Link {
         } else {
             setAttr(this.el, {
                 class:
-                    "outline-none py-1 mb-3 lg:mb-1 block focus:text-gray-900 hover:text-gray-900 text-gray-600 font-medium",
+                    "outline-none py-1 mb-3 lg:mb-1 block focus:text-gray-900 hover:text-gray-900 text-gray-700 font-medium",
             });
         }
 
@@ -83,12 +83,12 @@ export default class SideBar {
                     "a",
                     {
                         href: startPage,
-                        title: "Re:dom",
+                        title: "RE:DOM",
                         class: "self-center w-24 mb-8",
                     },
                     (this.logo = el("img", {
                         src: "./static/images/redomjs.svg",
-                        alt: "Re:dom Logo",
+                        alt: "RE:DOM Logo",
                     }))
                 ),
                 (this.search = el("input", {
@@ -127,7 +127,7 @@ export default class SideBar {
     }
 
     onSearch(value) {
-        if (value) {
+        if (value.length > 1) {
             const results = [];
             sideNav.map(item => {
                 if (item.text.toUpperCase().includes(value.toUpperCase())) {

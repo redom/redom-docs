@@ -21,7 +21,7 @@ export default class Home {
                     },
                     el("img", {
                         src: "./static/images/redomjs.svg",
-                        alt: "Re:dom Logo",
+                        alt: "RE:DOM Logo",
                         class: "self-center w-32 sm:w-40  my-12",
                     }),
                     el(
