@@ -38,6 +38,7 @@ export default class Home {
                                 href: "#installation",
                                 class:
                                     "sm:inline-flex items-center tracking-wider flex justify-center uppercase rounded-full px-8 py-3 sm:mr-4 mb-4 border border-primary text-base font-semibold text-primary",
+                                rel: "prerender",
                             },
                             "Get Started"
                         ),
@@ -48,6 +49,7 @@ export default class Home {
                                 target: "_blank",
                                 class:
                                     "sm:inline-flex items-center tracking-wider flex justify-center uppercase rounded-full px-8 pl-2 py-2 mb-4 border border-gray-200 bg-gray-200 text-base font-semibold text-gray-700",
+                                rel: "noopener",
                             },
                             svg(
                                 "svg",
@@ -103,6 +105,7 @@ export default class Home {
                                 title: "Benchmark",
                                 href:
                                     "https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html",
+                                rel: "noopener",
                             },
                             "(benchmark)"
                         ),
@@ -167,6 +170,7 @@ export default class Home {
                             target: "_blank",
                             class:
                                 "tracking-wider mb-4 rounded-full px-6 py-2 sm:mr-4 border border-primary text-sm font-semibold text-primary",
+                            rel: "noopener",
                         },
                         "Become a Backer!"
                     )
@@ -194,6 +198,7 @@ export default class Home {
                             target: "_blank",
                             class:
                                 "tracking-wider mb-4 rounded-full px-6 py-2 sm:mr-4 border border-primary text-sm font-semibold text-primary",
+                            rel: "noopener",
                         },
                         "Become a Sponsor!"
                     )
@@ -221,6 +226,7 @@ export class Contributor {
                 "data-title": login,
                 title: login,
                 class: "my-2 mx-2",
+                rel: "noopener",
             },
             el("img", {
                 class: "w-10 h-10 rounded-full",
@@ -263,6 +269,7 @@ export class Backer {
                 title: name,
                 target: "_blank",
                 class: "my-2 mx-2 w-16 h-16",
+                rel: "noopener",
             },
             backer
         );
