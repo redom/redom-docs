@@ -98,7 +98,7 @@ export default class SideBar {
                     placeholder: 'Search the docs (Press "Enter" to focus)',
                     type: "text",
                     value: "",
-                    ariaLabel: "search input",
+                    "aria-Label": "search input",
                 }))
             ),
             el(
