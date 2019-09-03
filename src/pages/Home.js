@@ -144,7 +144,7 @@ export default class Home {
                     {
                         class: "w-full max-w-6xl relative mx-auto px-6",
                     },
-                    el("h2", { class: "text-gray-600 text-xl font-medium mb-4" }, "Contributors"),
+                    el("h2", { class: "text-gray-700 text-xl font-medium mb-4" }, "Contributors"),
                     el("p", { class: "mb-8" }, "This project exists thanks to all the people who contribute."),
                     (this.contributors = list("div.flex.flex-wrap.justify-center", Contributor, "id"))
                 )
@@ -157,7 +157,7 @@ export default class Home {
                     {
                         class: "w-full max-w-6xl relative mx-auto px-6 pt-16 pb-4",
                     },
-                    el("h2", { class: "text-gray-600 text-xl font-medium mb-4" }, "Backers"),
+                    el("h2", { class: "text-gray-700 text-xl font-medium mb-4" }, "Backers"),
                     el("p", { class: "mb-8" }, "Thank you to all our backers!"),
                     (this.backers = list("div.flex.flex-wrap.justify-center.mb-6", Backer, "id")),
                     el(
@@ -180,7 +180,7 @@ export default class Home {
                     {
                         class: "w-full max-w-6xl relative mx-auto px-6 pt-16 pb-24",
                     },
-                    el("h2", { class: "text-gray-600 text-xl font-medium mb-4" }, "Sponsors"),
+                    el("h2", { class: "text-gray-700 text-xl font-medium mb-4" }, "Sponsors"),
                     el(
                         "p",
                         { class: "mb-8" },
