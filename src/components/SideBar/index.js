@@ -28,7 +28,7 @@ class Link {
             );
         }
 
-        if (children.length) {
+        if (children && children.length) {
             this.el = el(
                 "li",
                 { "tab-index": 0 },
@@ -134,7 +134,7 @@ export default class SideBar {
                 if (item.text.toUpperCase().includes(value.toUpperCase())) {
                     results.push(item);
                 }
-                if (item.children.length) {
+                if (item.children && item.children.length) {
                     item.children.map(subItem => {
                         if (subItem.text.toUpperCase().includes(value.toUpperCase())) {
                             results.push(subItem);
