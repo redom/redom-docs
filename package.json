@@ -4,9 +4,9 @@
     "repository": "https://github.com/redom/redom-docs.git",
     "license": "MIT",
     "scripts": {
-        "api": "node index.js",
+        "api": "node index.js && prettier .redomdoc/*.js --write ",
         "dev": "rollup -c -w",
-        "build": "npm run api && prettier .redomdoc/*.js --write && rollup -c --environment BUILD:production",
+        "build": "npm run api && rollup -c --environment BUILD:production",
         "lint": "eslint src/**/**/*.js"
     },
     "dependencies": {

@@ -4,6 +4,7 @@ import Prism from "prismjs";
 
 import { docsRepo } from "../../../.redomdoc/config.js";
 import "./../../styles/markdown.css";
+import "prismjs/components/prism-typescript";
 
 export default class Markdown {
     constructor(path, content) {

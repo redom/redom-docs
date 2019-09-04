@@ -70,6 +70,11 @@ module.exports = [
         login: "katywings",
     },
     {
+        html_url: "https://github.com/mauroreisvieira",
+        avatar_url: "https://avatars2.githubusercontent.com/u/3084774?v=4",
+        login: "mauroreisvieira",
+    },
+    {
         html_url: "https://github.com/RauliL",
         avatar_url: "https://avatars3.githubusercontent.com/u/8155018?v=4",
         login: "RauliL",
