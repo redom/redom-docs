@@ -80,7 +80,7 @@ type HTMLElementOfRedomQuery<Q extends RedomQuery> = Q extends RedomElement
 export type RedomComponentConstructor = RedomComponentClass | RedomComponentFunction;
 ```
 
-## Interface
+## Interfaces
 
 ### RedomComponent
 
@@ -152,7 +152,7 @@ export class Router implements RedomComponent {
 }
 ```
 
-## Namespace
+## Namespaces
 
 ### List
 
@@ -175,7 +175,9 @@ export namespace svg {
 }
 ```
 
-## Element
+## Functions
+
+### Element
 
 ```ts
 export function html<Q extends RedomQuery>(query: Q, ...args: RedomQueryArgument[]): HTMLElementOfRedomQuery<Q>;
@@ -188,7 +190,7 @@ export function el<Q extends RedomQuery>(query: Q, ...args: RedomQueryArgument[]
 | query    | `Q`                    | node element                     |
 | ...args  | `RedomQueryArgument[]` | arguments/attributes for element |
 
-## List
+### List
 
 ```ts
 export function listPool(View: RedomComponentConstructor, key?: string, initData?: any): ListPool;
@@ -202,7 +204,7 @@ export function list(parent: RedomQuery, View: RedomComponentConstructor, key?: 
 | key      | `string`                    |                |
 | initData | `any`                       |                |
 
-## Mount
+### Mount
 
 ```ts
 export function mount(
@@ -220,7 +222,7 @@ export function mount(
 | before   | `RedomElement` | you pass a before value, it works like `insertBefore()`. |
 | replace  | `boolean`      | if pass true it works like `replaceChild()`.             |
 
-## Unmount
+### Unmount
 
 ```ts
 export function unmount(parent: RedomElement, child: RedomElement): RedomElement;
@@ -231,7 +233,7 @@ export function unmount(parent: RedomElement, child: RedomElement): RedomElement
 | parent   | `RedomElement` | parent node.                             |
 | child    | `RedomElement` | node to append to the given parent node. |
 
-## Place
+### Place
 
 ```ts
 export function place(View: RedomComponentConstructor, initData?: any): Place;
@@ -242,7 +244,7 @@ export function place(View: RedomComponentConstructor, initData?: any): Place;
 | View     | `RedomComponentConstructor` |             |
 | initData | `any`                       |             |
 
-## Router
+### Router
 
 ```ts
 export function router(parent: RedomQuery, Views: RouterDictionary, initData?: any): Router;
@@ -254,7 +256,7 @@ export function router(parent: RedomQuery, Views: RouterDictionary, initData?: a
 | Views    | `RouterDictionary` |             |
 | initData | `any`              |             |
 
-## Set Attribute
+### Set Attribute
 
 ```ts
 export function setAttr(view: RedomElement, arg1: string | object, arg2?: string): void;
@@ -266,7 +268,7 @@ export function setAttr(view: RedomElement, arg1: string | object, arg2?: string
 | arg1     | `string | object` |             |
 | arg2     | `string`          |             |
 
-## Set Style
+### Set Style
 
 ```ts
 export function setStyle(view: RedomElement, arg1: string | object, arg2?: string): void;
@@ -278,7 +280,7 @@ export function setStyle(view: RedomElement, arg1: string | object, arg2?: strin
 | arg1     | `string | object` |             |
 | arg2     | `string`          |             |
 
-## Set Children
+### Set Children
 
 ```ts
 export function setChildren(parent: RedomElement, children: RedomElement[]): void;
@@ -289,7 +291,7 @@ export function setChildren(parent: RedomElement, children: RedomElement[]): voi
 | parent   | `RedomElement` |             |
 | children | `RedomElement` |             |
 
-## SVG
+### SVG
 
 ```ts
 export function svg(query: RedomQuery, ...args: RedomQueryArgument[]): SVGElement;
@@ -301,7 +303,7 @@ export function s(query: RedomQuery, ...args: RedomQueryArgument[]): SVGElement;
 | query    | `RedomQuery`           |             |
 | ...args  | `RedomQueryArgument[]` |             |
 
-## Text
+### Text
 
 ```ts
 export function text(str: string): Text;
