@@ -262,11 +262,11 @@ export function router(parent: RedomQuery, Views: RouterDictionary, initData?: a
 export function setAttr(view: RedomElement, arg1: string | object, arg2?: string): void;
 ```
 
-| Argument | Type              | Description |
-| -------- | ----------------- | ----------- |
-| view     | `RedomElement`    |             |
-| arg1     | `string | object` |             |
-| arg2     | `string`          |             |
+| Argument | Type               | Description |
+| -------- | ------------------ | ----------- |
+| view     | `RedomElement`     |             |
+| arg1     | `string` / `object` |             |
+| arg2     | `string`           |             |
 
 ### Set Style
 
@@ -274,11 +274,11 @@ export function setAttr(view: RedomElement, arg1: string | object, arg2?: string
 export function setStyle(view: RedomElement, arg1: string | object, arg2?: string): void;
 ```
 
-| Argument | Type              | Description |
-| -------- | ----------------- | ----------- |
-| view     | `RedomElement`    |             |
-| arg1     | `string | object` |             |
-| arg2     | `string`          |             |
+| Argument | Type               | Description |
+| -------- | ------------------ | ----------- |
+| view     | `RedomElement`     |             |
+| arg1     | `string` / `object` |             |
+| arg2     | `string`           |             |
 
 ### Set Children
 
