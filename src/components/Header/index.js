@@ -84,7 +84,7 @@ export default class Header {
                     (this.button = el(
                         "button",
                         {
-                            "arial-label": "Menu",
+                            "aria-label": "Menu",
                             role: "button",
                             class:
                                 "flex pl-4 items-center lg:hidden text-gray-500 focus:outline-none focus:text-gray-700",
