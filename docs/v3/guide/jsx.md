@@ -24,7 +24,7 @@ If you take a close look, you will find that there are actually four packages be
 npm install babel-cli babel-plugin-syntax-jsx babel-plugin-transform-react-jsx babel-preset-es2015 —-save-dev
 
 # Using yarn
-npm add babel-cli babel-plugin-syntax-jsx babel-plugin-transform-react-jsx babel-preset-es2015 --dev
+yarn add babel-cli babel-plugin-syntax-jsx babel-plugin-transform-react-jsx babel-preset-es2015 --dev
 ```
 
 Create a `.babelrc` file:
