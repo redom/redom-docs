@@ -13,14 +13,23 @@ Another great benefit is, that you can use just **pure JavaScript**, so no compl
 ## Getting Started
 
 > The official guide assumes intermediate level knowledge of HTML, CSS, and JavaScript.
-If you are totally new to frontend development, it might not be the best idea to jump right into a framework as your first step.
+If you are totally new to front-end development, it might not be the best idea to jump right into a framework as your first step.
 
-The easiest way to try out RE:DOM is using the JSFiddle Hello World example.
-Feel free to open it in another tab and follow along as we go through some basic examples. Or, you can create an `index.html` file and include RE:DOM with:
+The easiest way to try out RE:DOM is using the JSFiddle [Hello World](https://jsfiddle.net/mauroreisvieira/n3m5vajz/embedded/result,js,css) example.
+Feel free to open this example in another tab and follow along as we go through some basic examples, or you can create an `index.html` file with the following code:
 
 ```html
-<!-- production version, optimized for size and speed -->
-<script src="https://redom.js.org/redom.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script src="https://redom.js.org/redom.min.js"></script>
+        <script>
+            import { el, mount } from "redom";
+            const hello = el("h1", "Hello world!");
+            mount(document.body, hello);
+        </script>
+    </body>
+</html>
 ```
 
 

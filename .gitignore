@@ -3,9 +3,9 @@
 Thumbs.db
 
 # Editors and IDEs
-*.sublime-*
 *.code-workspace
 .vscode/
+.sublime/
 .idea/
 
 # Generated folders

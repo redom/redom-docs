@@ -86,6 +86,11 @@ module.exports = [
         text: "Examples",
         children: [
             {
+                path: "#hello-world",
+                text: "Hello World",
+                link: "docs/v3/examples/hello-world.md",
+            },
+            {
                 path: "#todomvc",
                 text: "TodoMVC",
                 link: "docs/v3/examples/todomvc.md",
