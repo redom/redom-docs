@@ -79,6 +79,11 @@ module.exports = [
                 text: "API Reference",
                 link: "docs/v3/api/index.md",
             },
+            {
+                path: "#showcase",
+                text: "Showcase",
+                link: "docs/v3/showcase/index.md",
+            },
         ],
     },
     {
