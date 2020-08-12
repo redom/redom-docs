@@ -70,6 +70,8 @@ We can use the `mount()` function to make a matching **real DOM tree**.
 **Here's what that looks like:**
 
 ```js
+import { el, mount } from "redom";
+
 // JSX to VDOM
 let vdom = <div id="foo">Hello World!</div>;
 
