@@ -100,7 +100,7 @@ const table = list("table", Tr);
 mount(document.body, table);
 ```
 
-This works, but in case you need to access `this.el.el` (`<tr>`) in `Tr`, I recommend to use the following:
+This works, but in case you need to access `this.el.el` (`<td>`) in `Tr`, I recommend to use the following:
 
 ```js
 class Td {
