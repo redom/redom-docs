@@ -1,7 +1,7 @@
 #carbon {
   position: fixed;
   bottom: .5rem;
-  left: .5rem;
+  right: .5rem;
 }
 #carbonads * {
   margin: initial;

@@ -20,4 +20,32 @@ module.exports = [
         profile: "https://opencollective.com/joshua-dover",
         role: "BACKER",
     },
+    {
+        name: "SwissDev Jobs",
+        image: "https://logo.clearbit.com/swissdevjobs.ch",
+        website: "https://swissdevjobs.ch/jobs/Java/All",
+        profile: "https://opencollective.com/swissdev-jobs",
+        role: "BACKER",
+    },
+    {
+        name: "SwissDev Jobs",
+        image: "https://logo.clearbit.com/swissdevjobs.ch",
+        website: "https://swissdevjobs.ch/jobs/Java/All",
+        profile: "https://opencollective.com/swissdev-jobs",
+        role: "BACKER",
+    },
+    {
+        name: "Guest",
+        image: "null",
+        website: "null",
+        profile: "https://opencollective.com/guest-48a089e4",
+        role: "BACKER",
+    },
+    {
+        name: "Andrei Vaduva",
+        image: "https://www.gravatar.com/avatar/21ef7b785896171271ef8a564c040356?default=404",
+        website: "null",
+        profile: "https://opencollective.com/andrei-vaduva",
+        role: "BACKER",
+    },
 ];
