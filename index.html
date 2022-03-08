@@ -65,5 +65,10 @@
     <body class="font-sans font-normal text-gray-700 leading-normal">
         <script src="dist/main.js" type="module"></script>
         <div id="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI427I&placement=redomjsorg" id="_carbonads_js"></script></div>
+        <script>
+          window.addEventListener('hashchange', () => {
+            _carbonads && _carbonads.refresh();
+          });
+        </script>
     </body>
 </html>
