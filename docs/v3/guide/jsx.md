@@ -58,7 +58,7 @@ const foo = <div id="foo">Hello World!</div>;
 **After:**
 
 ```js
-var foo = el('div', {id:"foo"}, 'Hello!');
+var foo = el('div', {id:"foo"}, 'Hello World!');
 ```
 
 Now we know that JSX is transformed into `el()` function calls.
