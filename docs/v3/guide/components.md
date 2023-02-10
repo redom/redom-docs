@@ -25,7 +25,7 @@ mount(document.body, hello);
 ## Diffing
 
 You don't have to manually diff class names / properties / attributes **except when dealing with URLs**.
-If you change the `src` of `img`, `iframe` or `video` elements, the browser will **reload** the asset/website even if the value did not actually change.
+If you set the `src` of `img`, `iframe` or `video` elements, the browser might **reload** the asset/website even if the value did not actually change.
 One way to work around this would be:
 
 ```js
