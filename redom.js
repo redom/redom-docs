@@ -112,6 +112,7 @@
 
   /* global Node, ShadowRoot */
 
+
   var hookNames = ['onmount', 'onremount', 'onunmount'];
   var shadowRootAvailable = typeof window !== 'undefined' && 'ShadowRoot' in window;
 
@@ -140,7 +141,7 @@
         var beforeEl = getEl(before);
 
         if (beforeEl.__redom_mounted) {
-          trigger(before.el, 'onunmount');
+          trigger(beforeEl, 'onunmount');
         }
 
         parentEl.replaceChild(childEl, beforeEl);
@@ -267,6 +268,7 @@
 
   /* global SVGElement */
 
+
   var xlinkns = 'http://www.w3.org/1999/xlink';
 
   function setAttr (view, arg1, arg2) {
@@ -379,8 +381,6 @@
     return arg && arg.nodeType;
   }
 
-  var htmlCache = {};
-
   function html (query) {
     var args = [], len = arguments.length - 1;
     while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
@@ -390,9 +390,7 @@
     var type = typeof query;
 
     if (type === 'string') {
-      element = memoizeHTML(query).cloneNode(false);
-    } else if (isNode(query)) {
-      element = query.cloneNode(false);
+      element = createElement(query);
     } else if (type === 'function') {
       var Query = query;
       element = new (Function.prototype.bind.apply( Query, [ null ].concat( args) ));
@@ -408,18 +406,12 @@
   var el = html;
   var h = html;
 
-  html.extend = function extendHtml (query) {
-    var args = [], len = arguments.length - 1;
-    while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+  html.extend = function extendHtml () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
 
-    var clone = memoizeHTML(query);
-
-    return html.bind.apply(html, [ this, clone ].concat( args ));
+    return html.bind.apply(html, [ this ].concat( args ));
   };
-
-  function memoizeHTML (query) {
-    return htmlCache[query] || (htmlCache[query] = createElement(query));
-  }
 
   function setChildren (parent) {
     var children = [], len = arguments.length - 1;
@@ -606,6 +598,7 @@
 
   /* global Node */
 
+
   function place (View, initData) {
     return new Place(View, initData);
   }
@@ -675,20 +668,22 @@
 
   /* global Node */
 
-  function router (parent, Views, initData) {
-    return new Router(parent, Views, initData);
+
+  function router (parent, views, initData) {
+    return new Router(parent, views, initData);
   }
 
-  var Router = function Router (parent, Views, initData) {
+  var Router = function Router (parent, views, initData) {
     this.el = ensureEl(parent);
-    this.Views = Views;
+    this.views = views;
+    this.Views = views; // backwards compatibility
     this.initData = initData;
   };
 
   Router.prototype.update = function update (route, data) {
     if (route !== this.route) {
-      var Views = this.Views;
-      var View = Views[route];
+      var views = this.views;
+      var View = views[route];
 
       this.route = route;
 
@@ -705,8 +700,6 @@
 
   var ns = 'http://www.w3.org/2000/svg';
 
-  var svgCache = {};
-
   function svg (query) {
     var args = [], len = arguments.length - 1;
     while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
@@ -716,9 +709,7 @@
     var type = typeof query;
 
     if (type === 'string') {
-      element = memoizeSVG(query).cloneNode(false);
-    } else if (isNode(query)) {
-      element = query.cloneNode(false);
+      element = createElement(query, ns);
     } else if (type === 'function') {
       var Query = query;
       element = new (Function.prototype.bind.apply( Query, [ null ].concat( args) ));
@@ -733,16 +724,32 @@
 
   var s = svg;
 
-  svg.extend = function extendSvg (query) {
-    var clone = memoizeSVG(query);
+  svg.extend = function extendSvg () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
 
-    return svg.bind(this, clone);
+    return svg.bind.apply(svg, [ this ].concat( args ));
   };
 
   svg.ns = ns;
 
-  function memoizeSVG (query) {
-    return svgCache[query] || (svgCache[query] = createElement(query, ns));
+  function viewFactory (views, key) {
+    if (!views || typeof views !== 'object') {
+      throw new Error('views must be an object');
+    }
+    if (!key || typeof key !== 'string') {
+      throw new Error('key must be a string');
+    }
+    return function (initData, item, i, data) {
+      var viewKey = item[key];
+      var View = views[viewKey];
+
+      if (View) {
+        return new View(initData, item, i, data);
+      } else {
+        throw new Error(("view " + viewKey + " not found"));
+      }
+    };
   }
 
   exports.List = List;
@@ -766,7 +773,6 @@
   exports.svg = svg;
   exports.text = text;
   exports.unmount = unmount;
-
-  Object.defineProperty(exports, '__esModule', { value: true });
+  exports.viewFactory = viewFactory;
 
 }));
