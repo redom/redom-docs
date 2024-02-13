@@ -104,7 +104,7 @@ export default class Home {
                                 target: "_blank",
                                 title: "Benchmark",
                                 href:
-                                    "https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html",
+                                    "https://krausest.github.io/js-framework-benchmark/2024/table_chrome_121.0.6167.85.html",
                                 rel: "noopener",
                             },
                             "(benchmark)"
